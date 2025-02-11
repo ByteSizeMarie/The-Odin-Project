@@ -1,4 +1,4 @@
-# The-Odin-Project-coming-soon-
+# The-Odin-Project
 
 Hello and welcome to my The Odin Project repository!
 
