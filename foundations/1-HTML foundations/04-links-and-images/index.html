@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>My (not really) Fourth Webpage</title>
+    </head>
+
+    <body>
+        <h1>Homepage</h1>
+
+        <h3>Links</h3>
+        <!-- The noopener attribute prevents a link opened in a new tab from interacting with or accessing the original page, reducing security risks like tabnabbing, and hides the referrer. Adding noreferrer ensures the opened link doesn’t know your site links to it. While newer browsers offer some security with just target="_blank", it’s best practice to use both rel="noopener noreferrer" for extra safety. -->
+        <a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">About The Odin Project</a>
+
+        <!-- Absolute links contain scheme(https) and domain(www.theodinproject.com)-->
+        <a href="https://www.theodinproject.com/paths">All Paths - The Odin Project</a>
+
+        <!-- Relative links contain file path to other pages within our website-->
+        <!-- "./" specifies that the code should start looking for the file relative to the current directory-->
+        <a href="./pages/about.html">About</a>
+        
+        <h3>Images</h3>
+        <!-- Absolute path -->
+        <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo">
+
+        <!-- Relative path -->
+        <!-- Specifying height and width attributes in HTML helps prevent layout shifts by reserving space for the image before it loads. While modern browsers handle this well without them, it's still considered a best practice for better load performance and layout stability. On the other hand, in flexible, responsive layouts where CSS is fully used to control the image size, these attributes might be seen as redundant, since CSS can achieve the same result with more flexibility. -->
+        <img src="./images/dog.jpg" alt="cute dog with yellow background" height="400" width="300">
+    </body>
+</html>
