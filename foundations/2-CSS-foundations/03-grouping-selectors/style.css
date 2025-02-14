@@ -1,0 +1,34 @@
+/*
+1. black background, white text
+2. blue (originaly yellow) background, black text
+
+→ both have: font-size: 28px, font-family: Helvetica, "Times New Roman", sans-serif
+*/
+
+.black-btn,
+.blue-btn {
+    font-family: Helvetica, "Times New Roman", sans-serif;
+    font-size: 28px;  
+}
+
+.black-btn {
+    background-color: #000;
+    color: #fff;
+}
+
+.blue-btn {
+    background-color: #797ef6;
+}
+
+
+/* Extra: Hover effects added for interactivity (not part of the original task) */
+.black-btn:hover {
+    background-color: #fff;
+    color: #797ef6;
+}
+
+.blue-btn:hover {
+    background-color: #000;
+    color: #797ef6;
+    border-color: #797ef6; 
+}

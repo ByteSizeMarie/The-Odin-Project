@@ -1,0 +1,29 @@
+/*
+
+1. lightred/pink , Verdana, "DejaVu Sans", sans-serif; ✔️
+2. blue text, font-size: 36px; ✔️
+3. lightred/pink , Verdana, "DejaVu Sans", sans-serif; font-size: 24px;✔️
+4. light green background, font-size: 24px; font-weight: bold;✔️
+5. lightred/pink , Verdana, "DejaVu Sans", sans-serif; ✔️
+
+*/
+
+.odd {
+    background-color: #ffa7a6;
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+#number2 {
+    color: #0203eb;
+    font-size: 36px;
+}
+
+.number3,
+#number4 {
+    font-size: 24px;
+}
+
+#number4 {
+    background-color: #81ff81;
+    font-weight: bold;
+}
