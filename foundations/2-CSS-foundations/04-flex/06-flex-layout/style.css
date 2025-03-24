@@ -1,0 +1,76 @@
+/*
+To make sure the footer always stays at the bottom of the page, the  body must have a height of 100vh. The content area, which should take up the remaining space, is given flex: 1 to fill the available area.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: Roboto, sans-serif;
+    display: flex;                      /* Added*/
+    flex-direction: column;             /* Added*/
+} 
+
+/* HEADER & FOOTER*/    
+.header,
+.footer {
+    display: flex;                      /* Added*/
+    justify-content: space-between;     /* Added*/
+}
+
+.footer {
+    background-color: #eeeeee;      /* Added*/
+}
+
+ul {    
+    display: flex;                      /* Added*/
+    gap: 15px;                          /* Added*/
+    padding: 0 15px;                    /* Added*/
+}
+
+li {
+    list-style-type: none;              /* Added*/
+}
+
+a {
+    text-decoration: none;              /* Added*/
+    color: #606060;                   /* Added*/
+}  
+
+/* CONTENT */
+.content {  
+    display: flex;                      /* Added*/
+    /*
+    short form of flex-grow, flex-shrink & flex-basis
+    The content area will expand to fill the available space in the container, taking up any unused space.
+    */
+    flex: 1;                        
+    flex-direction: column;             /* Added*/
+    justify-content: center;            /* Added*/
+    align-items: center;                /* Added*/
+}
+
+img {
+    width: 600px;
+}
+
+.buttons {
+    padding: 15px;                      /* Added*/
+}
+
+button {
+    font-family: Roboto, sans-serif;
+    border: none;
+    border-radius: 8px;
+    background: #eee;
+    padding: 5px 15px;                  /* Added*/
+}
+
+input {
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 8px 24px;
+    width: 400px;
+}
