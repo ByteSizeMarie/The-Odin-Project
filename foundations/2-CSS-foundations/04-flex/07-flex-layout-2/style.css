@@ -1,0 +1,75 @@
+/*
+To make the body use the whole screen height, it not only needs a height of 100vh and content that has a flex: 1 but the body HAS to be a display:flex and the wanted flex direction to work properly
+*/
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;                      /* added */
+    flex-direction: column;             /* added */
+}
+
+.header {
+    /* height: 72px; */         
+    background: darkmagenta;
+    color: white;
+
+    font-size: 30px;                    /* added */
+    font-weight: bolder;                /* added */
+    padding: 10px;                      /* added */
+}   
+
+.footer {
+    /* height: 72px; */
+    background: #eee;
+    color: darkmagenta;
+    display: flex;                      /* added */
+    justify-content: center;            /* added */
+    align-items: center;                /* added */
+    padding: 15px;                      /* added */
+}
+
+.content {
+    display: flex;                      /* added */
+    flex-direction: row;                /* added */
+    flex: 1;                            /* added */
+}
+
+.sidebar {
+    min-width: 300px;                   /* min-width to make it more flexible*/
+    background: royalblue;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;                    /* added */
+    margin: 0;                           /* added */
+    padding: 10px;                       /* added */
+}
+
+li {
+    margin-bottom: 10px;                /* added */
+}
+
+a {
+    color: white;                      /* added */
+    text-decoration: none;               /* added */
+}
+
+.card-container {
+    display: flex;                      /* added */
+    flex-wrap: wrap;                    /* added */
+    gap: 25px;                          /* added */
+    padding: 35px;                      /* added */
+}
+
+.card {
+    border: 1px solid #eee;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+    border-radius: 4px;
+    font-size: 14px;                    /* added */
+    width: 250px;                       /* added */
+    height: 250px;                      /* added */
+    padding: 20px;                      /* added */
+}   
