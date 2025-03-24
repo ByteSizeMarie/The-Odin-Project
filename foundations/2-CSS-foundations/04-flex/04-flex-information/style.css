@@ -1,0 +1,54 @@
+/*
+I added a few comments after looking at the solution to remind me of what could be done with less code. Overall I  still wanted to keep my original code to know that there are a lot of ways to get to similar results. 
+===== All roads lead to Rome. =====
+*/
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 900;
+    display: flex;                      /* added */
+    justify-content: center;            /* added */
+    /* title is a block-element which has an inline-element inside - this can be centered with text-align in the body, no additional flexbox needed -> less code (solution) */
+    margin-bottom: 35px;
+}
+
+.container {
+    display: flex;                      /* added */
+    justify-content: center;            /* added */
+    gap: 50px;                          /* added */
+}
+
+.item {
+    max-width: 200px;
+    display: flex;                      /* added */
+    flex-direction: column;             /* added */
+    align-items: center;                /* added */
+    gap: 5px;                           /* added */
+    /* only max-width to center content - no additional flexbox needed -> less code (solution) */
+}   
+
+.text {
+    text-align: center;                 /* added */
+}
+
+/* do not edit this footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+}
