@@ -1,0 +1,146 @@
+/* 
+In my first attempt I wrote a lot of repetitive code to achieve the desired result, but I wanted to try to get the same outcome with a cleaner, more efficent approach.
+*/
+
+/* FIRST VERSION
+
+this is some magical font-importing.  
+you'll learn about it later
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
+
+body {
+  margin: 0;
+  background: #eee;
+  font-family: Besley, serif;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;                        added 
+  justify-content: space-between;       added 
+}
+
+.profile-image {
+  background: rebeccapurple;
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.logo {
+  color: rebeccapurple;
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;. 
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  background: rebeccapurple;
+  color: white;
+  padding: 8px 24px;
+}
+
+a {
+  this removes the line under our links 
+  text-decoration: none;
+  color: rebeccapurple;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;                    added
+  padding: 0;                   added
+}
+
+.left-container,
+.right-container {
+    display: flex;              added
+    align-items: center;        added
+}   
+
+.logo,
+.links li {
+    margin-left: 15px;          added
+}
+
+.links {
+    display: flex;              added 
+}
+
+.notifications,
+.profile-image {
+    margin-right: 15px;         added
+}*/
+
+
+/* SECOND VERSION 
+This version is less repetitive, cleaner and overall better.
+*/
+
+/* this is some magical font-importing.  
+you'll learn about it later. */
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
+
+body {
+  margin: 0;
+  background: #eee;
+  font-family: Besley, serif;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;                          /* added */
+  justify-content: space-between;         /* added */
+  padding: 10px;
+}
+
+.left-container,
+.right-container {
+  display: flex;                          /* added */
+  align-items: center;                    /* added */
+  gap: 15px;                              /* added */
+}
+
+.profile-image {
+  background: rebeccapurple;
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.logo {
+  color: rebeccapurple;
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  background: rebeccapurple;
+  color: white;
+  padding: 8px 24px;
+}
+
+a {
+  /* this removes the line under our links */
+  text-decoration: none;
+  color: rebeccapurple;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;                        /* added */
+  gap: 15px;                            /* added */
+  margin: 0;                            /* added */
+  padding: 0;                           /* added */
+}
