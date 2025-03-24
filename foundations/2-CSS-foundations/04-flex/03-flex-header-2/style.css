@@ -98,7 +98,7 @@ body {
   box-shadow: 0 0 8px rgba(0,0,0,.1);
   display: flex;                          /* added */
   justify-content: space-between;         /* added */
-  padding: 10px;
+  padding: 10px;                          /* added */
 }
 
 .left-container,
