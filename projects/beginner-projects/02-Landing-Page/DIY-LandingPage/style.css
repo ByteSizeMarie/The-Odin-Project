@@ -5,11 +5,12 @@
 }
 
 :root {
-    --roboto-font: Roboto, Arial, sans-serif;
-    --primary-color: #F9FAF8;
-    --secondary-color: #E5E7EB;
-    --tertiary-color: #1F2937;
-    --button-color:  #3882F6;
+    --header-font: "Ubuntu Mono", Arial, sans-serif;
+    --text-font: "Exo 2", Arial, sans-serif;
+    --primary-color: #F5F5F5;
+    --secondary-color: #629677;
+    --tertiary-color: #1E1E1E;
+    --button-color:  #A0C4FF;
     --placeholder: #6d747e;
 }
 
@@ -20,7 +21,7 @@ html {
 }
 
 body {
-    font-family: var(--roboto-font);
+    font-family: var(--text-font);
     font-size: 1em;
     display: flex;
     flex-direction: column;
@@ -31,10 +32,11 @@ body {
 header {
     width: 100%;
     height: 43.75rem;
-    background-color: var(--tertiary-color);
+    background: rgb(30,30,30);
+    background: linear-gradient(23deg, rgba(30,30,30,1) 49%, rgba(43,54,48,1) 55%, rgba(61,85,71,1) 63%, rgba(80,118,95,1) 69%, rgba(98,150,119,1) 75%, rgba(160,196,255,1) 98%);
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
+    flex-shrink: 0; 
 }
 
 nav,
@@ -51,7 +53,8 @@ nav {
 }
  
 .logo {
-    font-size: 1.5rem;
+    font-family: var(--header-font);
+    font-size: 1.625rem;
     color: var(--primary-color);
 }
 
@@ -64,15 +67,14 @@ nav ul {
 a {
     text-decoration: none;
     font-size: 1.125rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .hero {
     display: flex;
     align-items: center;
-    flex: 1;
-    
-    gap: 6.25rem;
+    flex: 1; 
+    gap: 5px;
     color: var(--primary-color);
 }
 
@@ -83,38 +85,41 @@ a {
 }
 
 h1 {
-    width: 21.875rem;
-    font-size: 3rem;
-    font-weight: 900;
+    width: 35rem;
+    font-family: var(--header-font);
+    font-size: 3.625rem;
+    font-weight: bolder;
 }
 
 .hero-text p {
     font-size: 1.125rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin: 0.625rem 0;
 }
 
 button {
-    font-family: var(--roboto-font);
+    font-family: var(--text-font);
     font-size: 1.125rem;
     background-color: var(--button-color);
-    color: var(--primary-color);
+    color: var(--tertiary-color);
     padding: 0.625rem 3.125rem;
     border: none;
     border-radius: 0.625rem;
 }
 
-.placeholder-image {
-    background-color: var(--placeholder);
-    color: var(--secondary-color);    
+.hero-image {  
+    width: 12.5rem;
+    height: 17rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    border: 10px solid var(--button-color);
+    border-radius: 10px;
 }
 
 footer { 
     background-color: var(--tertiary-color);
-    color: var(--secondary-color);
+    color: var(--primary-color);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -139,6 +144,7 @@ section {
 
 h2 {
     padding: 3.125rem 0;
+    font-family: var(--header-font);
     font-size: 2.25rem;
     font-weight: 900; 
     color: var(--tertiary-color);
@@ -159,22 +165,35 @@ h2 {
 .rounded-square {
     width: 9.375rem;
     height: 9.375rem;
-    border: 4px solid var(--button-color);
-    border-radius: 8px;
+    border: 6px solid var(--secondary-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-item p,
+.fa-solid {
+    font-size: 1rem;
+    color: var(--tertiary-color);
+}
+
+.info {
+    width: 100px;
 }
 
 /* SECTION 2 */
 .quote-section {
     width: 100%;
     padding: 6.25rem;
-    background-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
 }
 
 blockquote {
     width: 50%;
-    color: var(--tertiary-color);
     font-size: 2.25rem;
-    font-weight: lighter;
+    font-weight: 200;
     font-style: italic;
 }
 
@@ -182,6 +201,7 @@ blockquote {
     width: 43.75rem;
     font-weight: 600;
     text-align: end;
+    color: var(--secondary-color);
 }
 
 /* SECTION 3 */
@@ -209,10 +229,12 @@ blockquote {
 }
 
 .cta-container p {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
 
 .cta-button {
-    border: 2px solid var(--primary-color);
+    color: var(---color);
+    font-weight: bolder;
+    border: 4px solid var(--primary-color);
 }
 
