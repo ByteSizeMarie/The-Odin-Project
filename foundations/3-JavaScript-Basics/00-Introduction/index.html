@@ -35,65 +35,36 @@
             console.log(pi);
 
 
-            // Numbers
+            // 4. Numbers
             console.log((3 + 2) - 76 * (1 + 1));
 
-            // Exercises 
-            // 1
-            console.log(23 + 97);                   // 120
-            console.log(14 * 3 + 78 * (3+2)- 2);    //430
-            console.log((4 + 6 +9) / 77);           // 0.2465
 
-            // 2
-            let a = 10;         
-            console.log(a);                         // 10
-            a = 27;
-            console.log(a);                         // 27
-            let b = 7 * a;
-            console.log(b);                         // 189
-
-            // 3
-            const max = 57;
-            const actual = max - 13;
-            const percentage = actual / max;
-            console.log(percentage);                // 0.771....
-
-            // 4 
-            // More exercises https://javascript.info/operators
-            let a1 = 1, b1 = 1;
-            let c = ++a1; // ?? → 2, prefix form returns the new value
-            let d = b1++; // ?? → 1, postfix form returns the old value
-            console.log(c, d);
+            // 5. Increment and Decrement with pre- or postfixing
+            // Increment with prefixing (++ before)
+            let newVar = 3;
+            newVar = ++newVar;      // increased by 1 with prefixing
+            // newVar = newVar +1      is the same
+            console.log(newVar);    // 4
             
-            // 5
-            let a2 = 2;
-            let x2 = 1 + (a2 *= 2); 
-            console.log(a2, x2);    // a2 = 4, x2 = 5
+            // Increment with postfixing (++ after)
+            let newVar1 = 3;
+            // console.log(newVar1);     is the same
+            // newVar1 = newVar1 + 1;
+            newVar1 = newVar1++;      // increased by 1 with postfixing 
+            console.log(newVar1);     // 3 → returns variable and then after increases the value
 
-            // 6
-            console.log("Space");
-            console.log("" + 1 + 0);        // guess: 1, answer: 10
-            console.log("" - 1 + 0);        // guess: -1?, answer: -1 ✔️
-            console.log(true + false);      // guess: 1, answer: 1 ✔️
-            console.log(6 / "3");           // guess: ???, answer: 2
-            console.log("2" * "3");         // guess: 23, answer: 6
-            console.log(4 + 5 + "px");      // guess: 9px, answer: 9px ✔️
-            console.log("$" + 4 + 5);       // guess: $4?, answer: $45 ❌✔️
-            console.log("4" - 2);           // guess: 4, answer: 2 
-            console.log("4px" - 2);         // guess: ??, answer: NaN
-            console.log("  -9  " + 5);      // guess: -4??, answer: -9 5
-            console.log("  -9  " - 5);      // guess: -14?, answer: -14 ✔️
-            console.log(null + 1);          // guess: null, answer: 1
-            console.log(undefined + 1);     // guess: 1, answer: NaN
-            console.log(" \t \n" - 2);      // guess: ???, answer: -2
+            // Decrement with prefixing (-- before)
+            let newVar2 = 3;
+            newVar2 = --newVar2;    // decreased by 1 with prefixing
+            //newVar2 = newVar2 - 1    is the same
+            console.log(newVar2);   // 2
 
-            // 7
-            // prompt = displays a dialog box that prompts the user for input
-            // alert = displays an alert box with a message and an OK button
-            let a3 = Number(prompt("First number?", 1));
-            let b3 = Number(prompt("Second number?", 2));
-            // Input is always a string - convert string with Number() or prepending +prompt()
-            alert(a3 + b3); // 12
+            // Decrement with postfixing (-- after)
+            let newVar3 = 3;
+            // console.log(newVar1);     is the same
+            // newVar1 = newVar1 1 1;
+            newVar3 = newVar3--;    // decreased by 1 with postfixing
+            console.log(newVar3);   // 3 → return variable and then after decreases the value
         </script>
     </body>
 </html>
