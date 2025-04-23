@@ -6,7 +6,9 @@
     - an external JavaScript file can be linked with the &lt;script&gt;-tag and "src"
         - it has to be either at the end of the HTML file or if placed in the head has to include type="module" or defer to be read after the HTML
     - **Which option is better?**
+
  - #### console.log() prints something to the developer console in the browser, this can help with finding mistakes
+
  - #### declaring variables 
     - ~~var~~ -  old way to declare variables,
     it has function scope (not block scope) and gets hoisted (used before declaring variable), which can cause unexpected behavior.
@@ -15,6 +17,7 @@
     - What does block-scoped mean?  
       → If a variable is declared inside a block or function, it's only visible there. If it's declared outside, it's available inside too — unless it's redeclared inside, which creates a new, separate variable and leaves the outer one unchanged.  
       **Declared inside? Stays inside. Declared outside? Can be seen inside — unless you shadow (overwrite) it.**
+
  - #### performing number operations
    - LOGICAL OPERATORS 
       - equal to ==
@@ -41,8 +44,7 @@
    - COMMA OPERATOR 
       - , - used to write shorter code, allows to evaluate several expressions but will only return the last one, it needs to be used with parentheses because it has a low precedence, lower than =
    - Number Methods
-      - Number() - converting booleans, dates or strings to numbers, also prepending + possible 
-
+      - Number() - converting booleans, dates or strings to numbers, also prepending + possible (like +string)
 
  - #### performing string operations
    - String Operators
@@ -63,5 +65,24 @@
       - .repeat(n) → Repeat the string n times
       - .startsWith(text) → Check if the string starts with something
       - .endsWith(text) → Check if the string ends with something
-
    - `${variable}` - similar to f-string in Python called "Template Literals", inserts variables into a string using backticks
+
+- #### using Javascript outside of web browser - Node.js
+   #### What is Node.js?  
+   It's often used to build back-end services like API's (Application Programming Interface). Node is made for superfast highly-scalable, data-intensive and real-time apps and has a large system of open-source libraries.
+   - can be installed with the **NVM (Node Version Manager)**, which makes changing Node versions and upgrading easy  
+   → this can be particularly important for different projects that need different versions of Node  
+   → NVM is mostly supported on Linux and Mac but there is a version for windows on [ Github by coreybutler](https://github.com/coreybutler/nvm-windows?tab=readme-ov-file#readme) and a good [tutorial](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
+      - Most used commands are:
+         - nvm -v - shows current version and all commands
+         - nvm install latest - installs latest version
+         - nvm alias default vX.Y.Z - makes this version default
+         - nvm use vA.B.C -  changes to this version
+      - Installing Node.js with NVM
+         - nvm install --lts/ nvm install lts (windows) - installs stable version of "long-term-support",   
+         this avoids incompatibilities with packages and is a guaranteed support for thirty months after its inital release 
+      - Using Node console
+         - Node has an interactive console in which JavaScript code can be run and edited without having to open a browser, this is perfect for debugging or testing small snippets
+         - it can be opened in a terminal/shell/cmd with the command **"node"**
+         - and closed with **".exit"**
+      - **npm ()** is used for installing various libraries and tools used in JavaScript environmentes. 
