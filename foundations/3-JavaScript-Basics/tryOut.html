@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+
+    <body>
+        <script>
+            // 07.05.25
+            console.log(1/0);                   // Infinity
+            console.log(-1/0)                   // -Infinity
+            // Because the division returns 0.0000000000....1, which could have indefinetly zeros, so it gives back Infinity, its a defined value of the IEEE-754 standard
+
+            console.log(Infinity - Infinity);   // NaN
+            // Both values can be undefinetly big, they could both be the same or one bigger than the other. Javascript gives back NaN because it isn't a logic numerical result, where you can certainly say that 5-3 is 2, it could be anything
+
+            const exmpl = "LongWord";
+            console.log(exmpl.at(-3));      // W?? ❌
+            // nope, negative starts with -1 from right to left
+
+            console.log(exmpl.at(-8));      // L
+            console.log(exmpl.at(-7));      // o
+            console.log(exmpl.at(-6));      // n
+            console.log(exmpl.at(-5));      // g
+            console.log(exmpl.at(-4));      // W
+            console.log(exmpl.at(-3));      // o
+            console.log(exmpl.at(-2));      // r
+            console.log(exmpl.at(-1));      // d
+
+            console.log(exmpl[4]);           // returns empty string eventhough it says that it may return undefined, could be "fixed"?
+
+            console.log(exmpl.charCodeAt(0));   // 76 → Ascii Code number for this letter
+        </script>
+    </body>
+</html>
