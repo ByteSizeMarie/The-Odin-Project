@@ -18,8 +18,8 @@
    - BigInt - added 2020 to represent integers of arbitrary length bigger than ±(253-1)   range, value is created by appending "n" to end of an integer 
    - String - surrounded by single or double quotes or backticks (Template Literals, ${...})
    - Boolean - only has two values: true or false
-   - "null" value - represents "nothing", "empty" or "value unknown"
-   - "undefined" value - if a variable is declared but not assigned then it's undefined
+   - "null" value - represents "nothing", "empty" or "value unknown", if converted into a number it becomes 0
+   - "undefined" value - if a variable is declared but not assigned then it's undefined, if converted into a number it becomes NaN
    - Objects and Symbols
       - object - can store collections of data and more complex entities
          - 
@@ -41,7 +41,7 @@
 
 
  - #### Number operations
-   - LOGICAL OPERATORS 
+   - COMPARISON OPERATORS 
       - equal to ==
       - equal value and equal type ===
       - not equal !=
@@ -50,6 +50,7 @@
       - less than < 
       - greater than or equal to >=
       - less than or equal to <=
+
    - ARITHMETIC OPERATORS - division, multiplication, addition, division, Modulo (remainder) %, exponentiation **
       - Increment and Decrement
          - var++ - increases a variable by 1, same as var = var + 1
@@ -60,9 +61,13 @@
          - When do I need pre- or postfixing?  
             → Use postfix when you need to do something with the old value before it changes.
             Use prefix when you need to immediately work with the new value.
-   - BITWISE OPERATORS - AND ( & ),
-   OR ( | ), XOR ( ^ ), NOT ( ~ ), LEFT SHIFT ( << ), RIGHT SHIFT ( >> ), ZERO-FILL RIGHT SHIFT ( >>> )
-      - rarely used in JavaScript
+
+   - LOGICAL OPERATORS - can be applied to values of any type, their results can also be of any type
+      - || (OR) - finds the first "truthy" value and returns it, if no value was evaluated it returns the last operand, often used in if statements to test if given conditions are true 
+      - && (AND) - finds the first "falsy" value and returns it,
+      - ! (NOT) - 
+      - ?? () -
+
    - COMMA OPERATOR 
       - , - used to write shorter code, allows to evaluate several expressions but will only return the last one, it needs to be used with parentheses because it has a low precedence, lower than =
    - Number Methods
@@ -95,7 +100,7 @@
       - 🔪 Extraction
          - .slice(start, end) → Cut out part of the string
          - .substring(start, end) → Similar to .slice() (no negative numbers)
-         - .substr() → 
+         - .substr() → has been removed from the latest JavaScript standard - use substring() or slice() instead
 
       - 🔄 Convertion
          - .toUpperCase() → Make all letters uppercase
@@ -103,16 +108,16 @@
 
       - ✂️ Trimming
          - .trim() → Remove spaces from start and end
-         - .trimstart() →
-         - .trimEnd() →
+         - .trimstart() → removes whitespace only from the start of a string
+         - .trimEnd() → removes whitespace only from the end of a string
 
       - 🛏️ Padding
-         - .padStart() →
-         - .padEnd() →
+         - .padStart() → pads a string from the start with another string (multiple times) until it reaches a given length
+         - .padEnd() → pads a string from the end with another string (multiple times) until it reaches a given length
 
       - 🔁 Replace
          - .replace(search, newText) → Replace part of the string
-         - .replaceAll() →
+         - .replaceAll() →  to specify a regular expression instead of a string to be replaced
 
       - 🔨 Others 
          - .concat()
@@ -123,6 +128,11 @@
 
    - `${variable}` - similar to f-string in Python called "Template Literals", inserts variables into a string using backticks
 
+ - #### Conditional Statements
+   - **if** to specify a block of code to be executed, if a specified condition is true
+   - **else** to specify a block of code to be executed, if the same condition is false
+   - **else if** to specify a new condition to test, if the first condition is false
+   - **switch** to specify many alternative blocks of code to be executed
 
 - #### Interaction's in the Browser
    - alert() - shows a modal window (user cant interact with anything until they closed the window with "ok")

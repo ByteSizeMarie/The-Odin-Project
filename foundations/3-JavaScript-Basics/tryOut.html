@@ -28,6 +28,37 @@
             console.log(exmpl[4]);           // returns empty string eventhough it says that it may return undefined, could be "fixed"?
 
             console.log(exmpl.charCodeAt(0));   // 76 → Ascii Code number for this letter
+
+            // 20.05.2025
+            // https://javascript.info/comparison
+            console.log(5 > 4);                     // guess: true ✔️
+            console.log("apple" > "pineapple");     // guess: false ✔️
+            console.log("2" > "12");                // guess: false ❌ → true, because 2 is bigger than 1 (dictionary comparison)
+            console.log(undefined == null);         // guess: false ❌ → true, because values equal each other 
+            console.log(undefined === null);        // guess: false ✔️
+            console.log(null == "\n0\n");           // guess: true ❌  → false, because null only equals undefined
+            console.log(null === +"\n0\n");         // guess: false ✔️
+
+            // || OR
+            console.log(true || true);      // true(truthy)
+            console.log(false || true);     // true
+            console.log(true || false);     // true
+            console.log(false || false);    // false
+            // equal are ...
+            console.log(1 || 1);            // 1
+            console.log(0 || 1);            // 1
+            console.log(0 || 0);            // 0
+
+            let hour = 9;
+            if (hour < 10 || hour > 18) {
+            console.log( 'The office is closed.' );
+            }
+
+            // && (AND)
+            console.log(true && true);      // true, because they are the same
+            console.log(true && false);     // false, because at least one is falsy
+            console.log(false && true);     // false
+            console.log(false && false);    // false
         </script>
     </body>
 </html>
